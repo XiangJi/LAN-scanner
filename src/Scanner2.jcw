@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>Scanner</label>
+	</settings>
+	<users>
+		<user>
+			<path>Scanner2.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Scanner.jcp</path>
+		</project>
+	</projects>
+</workspace>
