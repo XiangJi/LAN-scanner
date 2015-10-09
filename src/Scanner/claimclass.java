@@ -1,12 +1,15 @@
 package Scanner;
 
 import javax.swing.*;
-import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.border.*;
+
 
 class claimclass extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7165040681506740526L;
 	private JTextArea text = new JTextArea("CONTEXT:", 20, 100);
 	private JDialog fh = new JDialog(this, "Copyright Statment");
 	private String s1 = "Program designed and implemented by Xiang Ji and Zhen Fan!";

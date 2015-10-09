@@ -1,10 +1,11 @@
 package Scanner;
-import java.awt.*;
+
+
 import java.awt.event.*;
-class CancleAction implements ActionListener
-{
-public void actionPerformed (ActionEvent e)
-{
-System.exit(1);
-}
+
+
+class CancleAction implements ActionListener {
+	public void actionPerformed(ActionEvent e) {
+		System.exit(1);
+	}
 }

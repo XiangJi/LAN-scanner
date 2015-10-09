@@ -1,7 +1,5 @@
 package Scanner;
 
-import java.net.*;
-import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -22,7 +20,7 @@ class ThreadScan implements ActionListener {
 	public JMenuItem i1 = new JMenuItem("Scan open port");
 	public JMenuItem i2 = new JMenuItem("Scan online host");
 	public JMenuItem ipch = new JMenuItem("Hostname Resolve");
-	public JMenuItem ipscan = new JMenuItem("网络资源大小获取");
+	public JMenuItem ipscan = new JMenuItem("Get URL content length");
 	public JMenuItem com = new JMenuItem("Socket Client");
 	public JMenuItem com2 = new JMenuItem("Socket Server");
 	public JMenuItem i3 = new JMenuItem("Exit");
@@ -41,7 +39,7 @@ class ThreadScan implements ActionListener {
 	public static JPanel mPanel = new JPanel(); // panel for port scan
 
 	// IPSCAN, define all the labels and buttons
-	public static JTextArea Result1 = new JTextArea("IP scan result: ", 8, 50);
+	public static JTextArea Result1 = new JTextArea("", 8, 50);
 	public static JLabel staipl = new JLabel("IP start at:");
 	public static JTextField startip = new JTextField("192.168.1.1", 10);
 	public static JLabel endipl = new JLabel("IP end at:");
@@ -104,8 +102,7 @@ class ThreadScan implements ActionListener {
 		JLabel P1 = new JLabel("Port range:");
 		JLabel P2 = new JLabel("~");
 		JLabel TNUM = new JLabel("Threads number:");
-		JLabel RST = new JLabel(
-				"Port scanning result:                                       ");
+		JLabel RST = new JLabel("Port scanning result:                                       ");
 
 		Result.setLineWrap(true);  // lien an wrap
 		Result.setEditable(false); // can not edit result

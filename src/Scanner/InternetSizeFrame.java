@@ -13,10 +13,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-// unknown function
+// find the URL object size
 public class InternetSizeFrame extends JFrame implements ActionListener {
     
-    private JTextField tf_size;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7035612663462817933L;
+	private JTextField tf_size;
     private JTextField tf_address;
     /**
      * Launch the application

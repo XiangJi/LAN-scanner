@@ -36,10 +36,8 @@ class ipAction implements ActionListener {
 		ipThread.threadip = ipth;
 		// System.out.println(ipThread.threadip);
 
-		for (i = 0; i < ipth; i++)
 		// Create i thread;
-
-		{
+		for (i = 0; i < ipth; i++) {
 			new ipThread("IP" + i, i).start();
 
 		}

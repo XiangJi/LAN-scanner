@@ -10,6 +10,10 @@ import java.awt.event.*;
  * Help window
  */
 class dialogclass extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1744731277188628681L;
 	private JTextArea text = new JTextArea("CONTEXT:", 20, 50);
 	private JDialog fh = new JDialog(this, "Help");
 	private String s1 = "The tool is for scanning open ports of a given IP or hostname!";
