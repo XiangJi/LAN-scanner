@@ -5,14 +5,14 @@ import java.lang.*;
 
 
 
-public class SCanner
-{   static boolean socketflag=false;
+public class SCanner {
+	static boolean socketflag=false;
     static boolean ipflag=false;
     static boolean success=true;
     static boolean serverflag=false;
     static boolean serverclose=false;
-	public static void main(String[] args)
-	{  
+    
+	public static void main(String[] args) {  
 		new ThreadScan();
 		ClientSocketFrame clien = new ClientSocketFrame();
  		clien.setVisible(false);
