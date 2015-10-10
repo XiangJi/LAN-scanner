@@ -44,13 +44,13 @@ public class InternetSizeFrame extends JFrame implements ActionListener {
      */
     public InternetSizeFrame() {
         super();
-        setTitle("获取网络资源的大小");
+        setTitle("Get content length");
         getContentPane().setLayout(null);
         setBounds(100, 100, 391, 223);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         final JLabel label = new JLabel();
-        label.setText("输入网址：");
+        label.setText("Enter URL:");
         label.setBounds(10, 77, 79, 18);
         getContentPane().add(label);
 
@@ -64,19 +64,19 @@ public class InternetSizeFrame extends JFrame implements ActionListener {
                 String address = tf_address.getText().trim();// 获得输入的网址
                 try{
                     long len = netSourceSize(address);// 调用方法获取网络资源的大小
-                    tf_size.setText(String.valueOf(len)+" 字节");// 在文本框中显示网络资源的大小
+                    tf_size.setText(String.valueOf(len)+" Bytes");// 在文本框中显示网络资源的大小
                 }catch(Exception ex){
                     ex.printStackTrace();
-                    JOptionPane.showMessageDialog(getContentPane(), "请输入网络前缀(http://,ftp://...)");
+                    JOptionPane.showMessageDialog(getContentPane(), "Please enter prefix(http://,ftp://...)");
                 }
             }
         });
-        button.setText("获得大小");
+        button.setText("Go!");
         button.setBounds(282, 123, 86, 28);
         getContentPane().add(button);
 
         final JLabel label_1 = new JLabel();
-        label_1.setText("网络资源的大小为：");
+        label_1.setText("Content length: ");
         label_1.setBounds(10, 128, 127, 18);
         getContentPane().add(label_1);
 
@@ -87,7 +87,7 @@ public class InternetSizeFrame extends JFrame implements ActionListener {
         final JLabel label_2 = new JLabel();
         label_2.setForeground(new Color(0, 0, 255));
         label_2.setFont(new Font("", Font.BOLD, 22));
-        label_2.setText("获取网络资源的大小");
+        label_2.setText("Get URL content length");
         label_2.setBounds(82, 8, 239, 44);
         getContentPane().add(label_2);
     }

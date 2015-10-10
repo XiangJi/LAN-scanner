@@ -1,10 +1,9 @@
 package Scanner;
 
-import java.net.*;
+
 import java.io.*;
-import java.awt.*;
+
 import java.awt.event.*;
-import javax.swing.*;
 
 class ipAction implements ActionListener {
 	public static int flag2 = 0;
@@ -12,7 +11,6 @@ class ipAction implements ActionListener {
 	public void actionPerformed(ActionEvent a) {
 		String ipstart;
 		String ipend;
-		String substr;
 		char[] strs;
 		// 本程序只能扫描一个D段.
 		int ipth, i, j;
@@ -25,7 +23,7 @@ class ipAction implements ActionListener {
 		strs = ipstart.toCharArray();
 		i = 0;
 		j = 0;
-		while (i != 3) {
+		while (i < 3) {
 			if (strs[j] == '.')
 				i++;
 			j++;
@@ -54,9 +52,9 @@ class ipAction implements ActionListener {
 			for (int i = 1; i < 100; i++) {
 				str = input.readLine();
 				if (str != null) {
-					if (str.indexOf("MAC address") > 1) {
+					if (str.indexOf("MAC Address") > 1) {
 						macAddress = str.substring(
-								str.indexOf("MAC address") + 8, str.length());
+								str.indexOf("MAC Address") + 13, str.length());
 						break;
 					}
 				}
@@ -76,9 +74,9 @@ class ipAction implements ActionListener {
 			for (int i = 1; i < 100; i++) {
 				str = input.readLine();
 				if (str != null) {
-					if (str.indexOf("Only") > 1) {
-						HostName = str.substring(str.indexOf("Only") - 21,
-								str.indexOf("Only") - 6);
+					if (str.indexOf("UNIQUE") > 1) {
+						HostName = str.substring(str.indexOf("UNIQUE") - 21,
+								str.indexOf("UNIQUE") - 6);
 						break;
 					}
 				}
@@ -87,5 +85,4 @@ class ipAction implements ActionListener {
 		}
 		return HostName;
 	}
-
 }
